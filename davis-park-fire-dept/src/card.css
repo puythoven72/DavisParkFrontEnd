@@ -1,0 +1,74 @@
+.news-card {
+  width: 320px;
+  border-radius: 12px;
+  padding: 16px 18px 14px;
+  background: #ffffff;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.news-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.news-icon {
+  font-size: 1.4rem;
+}
+
+.news-icon.bullhorn {
+  transform: rotate(-10deg);
+}
+
+.news-title {
+  font-weight: 600;
+  font-size: 0.95rem;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #444;
+}
+
+.news-card-body {
+  margin-top: 4px;
+}
+
+.news-headline {
+  margin: 0 0 4px;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #222;
+}
+
+.news-summary {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #666;
+  line-height: 1.4;
+}
+
+.news-card-button {
+  align-self: flex-start;
+  margin-top: 6px;
+  padding: 6px 14px;
+  border-radius: 999px;
+  border: none;
+  background: #2563eb;
+  color: #fff;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s ease, transform 0.1s ease;
+}
+
+.news-card-button:hover {
+  background: #1d4ed8;
+  transform: translateY(-1px);
+}
+
+.news-card-button:active {
+  transform: translateY(0);
+}
