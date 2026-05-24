@@ -225,17 +225,54 @@
 .heroImage {
   /* Give your hero a set height or padding */
   min-height: 60vh; 
-  background-image: url('Images/HeroImage.png');
+  background-image: url('Images/heroTruck1.png');
   background-size: cover;
   background-position: center;
 }
 
+
+
 .heroContent {
+  display: flex;
+  font-family: 'MerriweatherBoldItalic', sans-serif;
+  justify-content: center;
+  color: #0b1a33;
+  -webkit-text-stroke: 1px white; /* Stroke width and color */
+    font-size: 50px;
+    font-weight: bold;
+    @media (max-width: 768px) {
+      font-size: 30px; /* Mobile */
+    }
+}
+
+.heroContentSub {
    display: flex;
   font-family: 'MerriweatherBoldItalic', sans-serif;
   justify-content: center;
-  color: white;
-}
+  color: #0b1a33;
+  -webkit-text-stroke: 1px white; /* Stroke width and color */
+  font-size: 30px;
+  font-weight: bold;
+  @media (max-width: 768px) {
+      font-size: 20px; /* Mobile */
+    }
+  }
+
+.heroButton {
+   display: flex;
+  font-family: 'MerriweatherBoldItalic', sans-serif;
+  justify-content: center;
+  color: #0b1a33;
+  -webkit-text-stroke: 1px white; /* Stroke width and color */
+  
+  font-size: 30px;
+  font-weight: bold;
+  @media (max-width: 768px) {
+    font-size: 20px; /* Mobile */
+  }
+  }
+
+
 .heroText{
    font-family: 'MerriweatherBoldItalic', sans-serif;
 }
@@ -247,13 +284,10 @@
   margin: 0 auto;
   padding: 0 20px;
 
-  /* THE MAGIC MAGIC HAPPENS HERE */
-  margin-top: -50px; /* Pulls the container up by 100px */
-  position: relative; /* Establishes a positioning context */
-  z-index: 10;        /* Forces it to sit on top of the hero */
+ 
 }
 
-.card {
+.cardHome {
   flex: 1;
   background: white;
   padding: 30px;
@@ -277,6 +311,23 @@ border: 5px solid blueviolet;
 .testBorder1{
 border: 5px solid green;
 
+}
+
+.title-divider {
+  border: 0;
+  height: 4px;
+  background: red; /* light gray line */
+  margin: 2rem auto;
+  width: 60%; /* optional: makes it shorter than full width */
+}
+
+
+.section-divider {
+  border: 0;
+  height: 2px;
+  background: #ccc; /* light gray line */
+  margin: 2rem auto;
+  width: 60%; /* optional: makes it shorter than full width */
 }
 
 

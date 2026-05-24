@@ -1,0 +1,7 @@
+.card-offset{
+
+     /* THE MAGIC MAGIC HAPPENS HERE */
+  margin-top: -50px; /* Pulls the container up by 100px */
+  position: relative; /* Establishes a positioning context */
+  z-index: 10;        /* Forces it to sit on top of the hero */
+}

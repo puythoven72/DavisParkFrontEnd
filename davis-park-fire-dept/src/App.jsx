@@ -7,6 +7,7 @@ import './App.css'
 import Home from './components/Home'
 import Footer from './components/Footer'
 import About from './components/About'
+import NewsEvents from './components/NewsEvents'
 import { Routes, Route, NavLink } from "react-router-dom";
 
 function App() {
@@ -20,7 +21,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/About" element={<About />} />
-
+        <Route path="/NewsEvents" element={<NewsEvents />} />
       </Routes>
       <Footer />
     </>

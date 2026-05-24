@@ -1,55 +1,75 @@
 import Card from 'react-bootstrap/Card';
 import CardGroup from 'react-bootstrap/CardGroup';
+import { useEffect, useState } from "react";
+import axios from 'axios';
+import Container from 'react-bootstrap/esm/Container';
 
-function Cards() {
+
+function Cards(type) {
+
+  const [allContent, setAllContent] = useState([]);
+  const [contentType, setContentType] = useState([]);
+
+  useEffect(() => {
+    console.log("type is " + type.type);
+    setContentType(type.type);
+    if (type.type === "news") {
+      console.log("Getting news");
+      getAllNews();
+    } else {
+      console.log("Getting events");
+      getAllEvents();
+    }
+  }, []);
+
+  //get the current events
+  const getAllNews = async () => {
+    await axios.get("/Content/news.json").then((res) => {
+      let allnews = res.data.newsItems;
+      setAllContent(allnews);
+    }).catch(function (error) {
+      console.log("No Current Events")
+    })
+  };
+
+  //get the current events
+  const getAllEvents = async () => {
+    await axios.get("/Content/events.json").then((res) => {
+      let allEvents = res.data.eventItems;
+      setAllContent(allEvents);
+    }).catch(function (error) {
+      console.log("No Current Events")
+    })
+  };
+
   return (
-    <CardGroup>
-      <Card>
-        {/* <Card.Img variant="top" src="holder.js/100px160" /> */}
-       <div className="news-card-header">
-        <span className="news-icon">📰</span>
-        <span className="news-title">Latest News</span>
-        <span className="news-icon bullhorn">📣</span>
-      </div>
-        <Card.Body>
-          <Card.Title>Card title</Card.Title>
-          <Card.Text>
-            This is a wider card with supporting text below as a natural lead-in
-            to additional content. This content is a little bit longer.
-          </Card.Text>
-        </Card.Body>
-        <Card.Footer>
-          <small className="text-muted">Last updated 3 mins ago</small>
-        </Card.Footer>
-      </Card>
-      <Card>
-        <Card.Img variant="top" src="holder.js/100px160" />
-        <Card.Body>
-          <Card.Title>Card title</Card.Title>
-          <Card.Text>
-            This card has supporting text below as a natural lead-in to
-            additional content.
-          </Card.Text>
-        </Card.Body>
-        <Card.Footer>
-          <small className="text-muted">Last updated 3 mins ago</small>
-        </Card.Footer>
-      </Card>
-      <Card>
-        <Card.Img variant="top" src="holder.js/100px160" />
-        <Card.Body>
-          <Card.Title>Card title</Card.Title>
-          <Card.Text>
-            This is a wider card with supporting text below as a natural lead-in
-            to additional content. This card has even longer content than the
-            first to show that equal height action.
-          </Card.Text>
-        </Card.Body>
-        <Card.Footer>
-          <small className="text-muted">Last updated 3 mins ago</small>
-        </Card.Footer>
-      </Card>
+
+    <CardGroup className="">
+
+      {
+        // allEvents.length !== 0 ?
+
+        allContent.map((news, index) => (
+
+
+          <Card style={{  }}
+              className="m-2 cardHome">
+            <Card.Img variant="top" src={news.image} />
+            <Card.Body >
+              <Card.Title className="" style={{ backgroundColor: "#2c3e50", color: "white" }}>{news.title}</Card.Title>
+              <Card.Text className="" >
+                {news.content}
+              </Card.Text>
+            </Card.Body>
+
+          </Card>
+        ))
+      }
+
+
+
     </CardGroup>
+
   );
 }
 

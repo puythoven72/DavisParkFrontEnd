@@ -11,14 +11,14 @@ function NavigationComponent() {
       <Navbar collapseOnSelect expand="lg" className=" navbar" style={{ backgroundColor: "#2c3e50", color: "white" }} >
         <Container fluid style={{ backgroundColor: "#2c3e50" }}>
           <Navbar.Brand  href="#home">
-            <img src="Images/logo.png" alt="Logo" />
+            <img src="Images/logo1.png" alt="Logo" />
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" style={{color: 'red'}} />
           <Navbar.Collapse id="responsive-navbar-nav" >
             <Nav className="me-auto navText" style={{ color: "#ffff" }} >
               <Nav.Link href="/" style={{ color: "#ffff" }} >Home</Nav.Link>
               <Nav.Link href="/About" style={{ color: "#ffff" }} >About</Nav.Link>
-              <Nav.Link href="#pricing" style={{ color: "#ffff" }}>News</Nav.Link>
+              <Nav.Link href="/NewsEvents" style={{ color: "#ffff" }}>News & Events</Nav.Link>
               <Nav.Link href="#features" style={{ color: "#ffff" }} >Membership</Nav.Link>
               <Nav.Link href="#features" style={{ color: "#ffff" }} >Contact</Nav.Link>
               {/* <NavDropdown title="Dropdown" id="collapsible-nav-dropdown" style={{  color: "#ffff" }}>

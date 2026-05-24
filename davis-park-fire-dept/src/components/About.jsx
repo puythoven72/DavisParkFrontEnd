@@ -1,10 +1,11 @@
 import "../About.css"
+import '../App.css'
 import Container from 'react-bootstrap/Container';
 import Row from "react-bootstrap/Row"
 function About() {
     return (
-        // <Container fluid className="about-page">
-        <Container  >
+         <Container fluid >
+         {/* <Container  > */}
             {/* <div className="about-hero">
         <img
           src="/Images/EmblemLighthouse.png"

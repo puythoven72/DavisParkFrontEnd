@@ -54,7 +54,7 @@ p, li, label {
 
  background: 
     linear-gradient(to bottom, rgba(255,255,255,0) 70%, white 100%),
-    url('/Images/EmblemLighthouse.png') no-repeat center/cover;
+    url('Images/EmblemLighthouse1.png') no-repeat center/contain;
 
  
   
@@ -106,19 +106,3 @@ p, li, label {
   color: #b22222;
 }
 
-.title-divider {
-  border: 0;
-  height: 5px;
-  background: red; /* light gray line */
-  margin: 2rem auto;
-  width: 60%; /* optional: makes it shorter than full width */
-}
-
-
-.section-divider {
-  border: 0;
-  height: 2px;
-  background: #ccc; /* light gray line */
-  margin: 2rem auto;
-  width: 60%; /* optional: makes it shorter than full width */
-}
