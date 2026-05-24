@@ -6,6 +6,8 @@ import Navigation from './components/NavigationComponent'
 import './App.css'
 import Home from './components/Home'
 import Footer from './components/Footer'
+import About from './components/About'
+import { Routes, Route, NavLink } from "react-router-dom";
 
 function App() {
   const [count, setCount] = useState(0)
@@ -13,10 +15,14 @@ function App() {
   return (
     <>
       <Navigation />
-    
-      <Home />
-      <Footer />
 
+
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/About" element={<About />} />
+
+      </Routes>
+      <Footer />
     </>
   )
 }

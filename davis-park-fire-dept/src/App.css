@@ -1,4 +1,22 @@
-.counter {
+/* merriweather-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Merriweather';
+  font-style: normal;
+  font-weight: 400;
+  src: url('./assets/fonts/merriweather/merriweather-v33-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* merriweather-900italic - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'MerriweatherBoldItalic';
+  font-style: italic;
+  font-weight: 900;
+  src: url('./assets/fonts/merriweather/merriweather-v33-latin-900italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+
+/* .counter {
   font-size: 16px;
   padding: 5px 10px;
   border-radius: 5px;
@@ -15,7 +33,7 @@
     outline: 2px solid var(--accent);
     outline-offset: 2px;
   }
-}
+} */
 
 /* .hero {
   position: relative;
@@ -152,6 +170,10 @@
     }
   }
 
+  .heroTitle{
+     font-family: 'MerriweatherBoldItalic', sans-serif;
+  }
+
   /* @media (max-width: 1024px) {
     margin-top: 20px;
     flex-wrap: wrap;
@@ -200,20 +222,23 @@
 }
 /* HeroSection.css */
 
-.hero {
+.heroImage {
   /* Give your hero a set height or padding */
   min-height: 60vh; 
   background-image: url('Images/HeroImage.png');
   background-size: cover;
   background-position: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  
 }
 
-
+.heroContent {
+   display: flex;
+  font-family: 'MerriweatherBoldItalic', sans-serif;
+  justify-content: center;
+  color: white;
+}
+.heroText{
+   font-family: 'MerriweatherBoldItalic', sans-serif;
+}
 
 .cards-container {
   display: flex;
@@ -236,6 +261,15 @@
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); /* Subtle shadow adds to the "floating" illusion */
 }
 
+.cardHeader{
+font-family: 'MerriweatherBoldItalic', sans-serif;
+      /* font-size: 2.05rem; */
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: #0b1a33;
+  margin-bottom: 1rem;
+
+}
 .testBorder{
 border: 5px solid blueviolet;
 
