@@ -1,10 +1,10 @@
-.news-content {
+/* .news-content {
   
 }
 
 .newsheroImage {
   /* Give your hero a set height or padding */
-  min-height: 60vh; 
+    /* aspect-ratio: 16 / 9;
 
  background: 
     linear-gradient(to bottom, rgba(255,255,255,0) 70%, white 100%),
@@ -12,9 +12,112 @@
 
  
   
+} */ 
+
+
+
+.hero-news {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* full viewport height */
+  background: url("/Images/heroBeach.png") center/cover no-repeat
+  ;
+  
+  color: #fff;
+  display: flex;
+  justify-content: center; /* Horizontal */
+  align-items: center;     /* Vertical */
+  height: 100vh;           /* Required for vertical centering */
+  overflow: hidden;
+  margin-bottom: 10px;
 }
 
-.news-content h1 {
+/* Gradient overlay for text readability */
+.hero-news::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, rgba(10, 26, 47, 0.8) 0%, rgba(10, 26, 47, 0.2) 40%, transparent 100%);
+  z-index: 1;
+}
+
+/* Emblem placement */
+.hero-news::after {
+  content: "";
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  width: 160px; /* ~8–10% of 1920px width */
+  height: 160px;
+  background: url("/Images/logo1.png") center/contain no-repeat;
+  filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.4));
+  z-index: 2;
+}
+
+/* Text container */
+.hero-news-content {
+  position: relative;
+  z-index: 3;
+  max-width: 600px;
+  padding-left: 220px; /* leaves space for emblem */
+}
+
+.hero-news-content h1 {
+   font-family: 'MerriweatherBoldItalic', sans-serif;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero-news-content p {
+  font-family: "Inter", sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .hero::after {
+    top: 30px;
+    left: 30px;
+    width: 120px;
+    height: 120px;
+  }
+
+  .hero-news-content {
+    padding-left: 160px;
+  }
+}
+
+/* Mobile optimization */
+@media (max-width: 768px) {
+  .hero {
+    height: 70vh;
+    background: url("/Images/beach-hero-mobile.png") center/cover no-repeat;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .hero::before {
+    background: linear-gradient(to bottom, rgba(10, 26, 47, 0.7) 0%, transparent 100%);
+  }
+
+  .hero-content {
+    padding: 0 20px;
+  }
+
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+}
+
+
+
+
+.h5,h1 ,button{
     font-family: 'MerriweatherBoldItalic', sans-serif;
       /* font-size: 2.05rem; */
     text-transform: uppercase;

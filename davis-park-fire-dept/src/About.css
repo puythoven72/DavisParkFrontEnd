@@ -17,92 +17,98 @@
 }
 
 
-/* Section Headings */
-h2, h3 {
-  font-family: 'merriweather', sans-serif;
-  text-transform: uppercase;
-  font-weight: 500;
+.hero-about {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* full viewport height */
+  background: url("/Images/emblemHero.png") center/cover no-repeat;
+  color: #fff;
+  display: flex;
+  justify-content: center; /* Horizontal */
+  align-items: center;     /* Vertical */
+  height: 100vh;           /* Required for vertical centering */
+    margin-bottom: 10px;
+  overflow: hidden;
 }
 
-/* Body Text, Alerts, and Community News */
-p, li, label {
-  font-family: 'merriweather', sans-serif;
-  font-weight: 400;
+/* Gradient overlay for text readability */
+.hero-about::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, rgba(10, 26, 47, 0.8) 0%, rgba(10, 26, 47, 0.2) 40%, transparent 100%);
+  z-index: 1;
+}
+
+/* Emblem placement */
+.hero-about::after {
+  content: "";
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  width: 160px; /* ~8–10% of 1920px width */
+  height: 160px;
+  background: url("/Images/logo1.png") center/contain no-repeat;
+  filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.4));
+  z-index: 2;
+}
+
+/* Text container */
+.hero-about-content {
+  position: relative;
+  z-index: 3;
+  max-width: 600px;
+  padding-left: 220px; /* leaves space for emblem */
+}
+
+.hero-about-content h1 {
+   font-family: 'MerriweatherBoldItalic', sans-serif;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero-about-content p {
+  font-family: "Inter", sans-serif;
+  font-size: 1.2rem;
   line-height: 1.6;
 }
 
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .hero-about::after {
+    top: 30px;
+    left: 30px;
+    width: 120px;
+    height: 120px;
+  }
 
-.about-page {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 3rem 1.5rem;
-  background: linear-gradient(to bottom, #f9fafc 0%, #ffffff 100%);
-  font-family: "Segoe UI", Roboto, sans-serif;
-  color: #1a1a1a;
+  .hero-about-content {
+    padding-left: 160px;
+  }
 }
 
-.about-hero {
-  text-align: center;
-  margin-bottom: 2rem;
+/* Mobile optimization */
+@media (max-width: 768px) {
+  .hero-about {
+    height: 70vh;
+    background: url("/Images/emblem-hero-mobile.png") center/cover no-repeat;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .hero-about::before {
+    background: linear-gradient(to bottom, rgba(10, 26, 47, 0.7) 0%, transparent 100%);
+  }
+
+  .hero-about-content {
+    padding: 0 20px;
+  }
+
+  .hero-about-content h1 {
+    font-size: 2rem;
+  }
+
+  .hero-about-content p {
+    font-size: 1rem;
+  }
 }
-
-
-.aboutheroImage {
-  /* Give your hero a set height or padding */
-  min-height: 60vh; 
-
- background: 
-    linear-gradient(to bottom, rgba(255,255,255,0) 70%, white 100%),
-    url('Images/EmblemLighthouse1.png') no-repeat center/contain;
-
- 
-  
-}
-
-.about-emblem {
- 
-  width: 50%;
-  height: auto;
-  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.15));
-}
-
-.fade-bg {
-   max-width: 320px;
-  width: 100%;
-  
-  background: 
-    linear-gradient(to bottom, rgba(255,255,255,0) 70%, white 100%),
-    url('/Images/EmblemLighthouse.png') no-repeat center/cover;
-}
-
-.about-content {
-  max-width: 700px;
-  text-align: center;
-}
-
-.about-content h1 {
-    font-family: 'MerriweatherBoldItalic', sans-serif;
-      /* font-size: 2.05rem; */
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-    color: #0b1a33;
-    margin-bottom: 1rem;
-
-}
-
-.about-content p {
-  /* font-size: 1.05rem;
-
-  margin-bottom: 1rem; */
-  
-
-    font-size: 1.5rem;
-      line-height: 1.6;
-}
-
-.about-highlight {
-  /* font-weight: 600; */
-  color: #b22222;
-}
-

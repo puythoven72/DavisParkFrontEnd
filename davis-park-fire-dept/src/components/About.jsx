@@ -4,8 +4,8 @@ import Container from 'react-bootstrap/Container';
 import Row from "react-bootstrap/Row"
 function About() {
     return (
-         <Container fluid >
-         {/* <Container  > */}
+        <Container fluid className="">
+            {/* <Container  > */}
             {/* <div className="about-hero">
         <img
           src="/Images/EmblemLighthouse.png"
@@ -14,8 +14,12 @@ function About() {
         />
       </div> */}
             {/* <div className="fade-bg"></div> */}
-            <Row className="aboutheroImage "></Row>
-            <Container className="about-content mt-4">
+            <section class="hero-about">
+                <Row class="hero-about-content ">
+
+                </Row>
+            </section>
+            <Row className="">
                 <h1 display-1 display-md-4 display-sm-6 fw-bold >
                     Welcome to the Davis Park Fire Department
                 </h1>
@@ -34,7 +38,7 @@ function About() {
                 </p>
                 <hr className="section-divider" />
                 <p className="about-highlight">Stop by the Firehouse and say hi.</p>
-            </Container>
+            </Row>
         </Container>
     );
 };

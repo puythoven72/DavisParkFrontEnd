@@ -2,16 +2,19 @@
   "newsItems": [
     {
       "title": "Open House 2026",
+      "actionStatement": "Open House Was A Great Success!",
       "content": "Department held demonstrations for the community and kids got to learn about the trucks",
       "image": "Images/newsTruck.jpeg"
     },
     {
       "title": "Smoke Detectors Save Lives",
+      "actionStatement": "Protect Your Family!",
       "content": "Change your smoke detector batteries every year.",
       "image": "Images/Smoke_detector.jpg"
     },
 {
-      "title": "2026 T-Shirts are in.",
+      "title": "2026 T-Shirts are in.", 
+      "actionStatement": "Show your support!",
       "content": "Stop by the post office or the fire house to purchase our 2022 Fire Department T shirts. Thanks for your support.",
       "image": "Images/logo1.png"
     }

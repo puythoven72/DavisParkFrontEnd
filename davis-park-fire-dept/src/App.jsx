@@ -9,6 +9,9 @@ import Footer from './components/Footer'
 import About from './components/About'
 import NewsEvents from './components/NewsEvents'
 import { Routes, Route, NavLink } from "react-router-dom";
+import NewsEventsItem from './components/NewsEventsItem';
+import Membership from './components/Membership';
+import Contact from './components/Contact';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -22,6 +25,9 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/About" element={<About />} />
         <Route path="/NewsEvents" element={<NewsEvents />} />
+        <Route path="/NewsEventsItem" element={<NewsEventsItem />} />
+        <Route path="/Membership" element={<Membership />} />
+        <Route path="/Contact" element={<Contact />} />
       </Routes>
       <Footer />
     </>

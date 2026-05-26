@@ -1,0 +1,118 @@
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Merriweather';
+  font-style: normal;
+  font-weight: 400;
+  src: url('./assets/fonts/merriweather/merriweather-v33-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* merriweather-900italic - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'MerriweatherBoldItalic';
+  font-style: italic;
+  font-weight: 900;
+  src: url('./assets/fonts/merriweather/merriweather-v33-latin-900italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+
+.membership-hero {
+  display: flex;
+  flex-wrap: wrap;
+  height: 100vh;
+  background-color: #0A1A2F;
+  color: #fff;
+}
+
+.hero-left {
+  flex: 1 1 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 60px;
+  background: rgba(10, 26, 47, 0.9);
+}
+
+.hero-right {
+  flex: 1 1 50%;
+  overflow: hidden;
+}
+
+.hero-right img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+
+
+.hero-emblem {
+  width: 120px;
+  margin-bottom: 20px;
+}
+
+.hero-left h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+ font-family: 'MerriweatherBoldItalic', sans-serif;
+}
+
+.hero-left p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  font-family: "Inter", sans-serif;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.btn-primary {
+  background-color: #C62828;
+  color: #fff;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: #fff;
+  border: 2px solid #fff;
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.hero-contact p {
+  margin: 4px 0;
+}
+
+.hero-contact small {
+  display: block;
+  margin-top: 10px;
+  color: #ccc;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .membership-hero {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .hero-left, .hero-right {
+    flex: 1 1 100%;
+    padding: 40px;
+  }
+
+  .hero-right img {
+    height: 300px;
+  }
+}

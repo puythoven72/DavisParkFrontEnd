@@ -1,12 +1,11 @@
-import Card from 'react-bootstrap/Card';
-import CardGroup from 'react-bootstrap/CardGroup';
+import React from 'react';
+import NewsCard from './NewsCard';
 import { useEffect, useState } from "react";
 import axios from 'axios';
 import Container from 'react-bootstrap/esm/Container';
-import Button from 'react-bootstrap/Button';
-import NewsEventsItem from "./NewsEventsItem";
-import { Link } from 'react-router-dom';
-function Cards(type) {
+
+// Main News Feed Component
+const NewsFeed = (type) => {
 
   const [allContent, setAllContent] = useState([]);
   const [contentType, setContentType] = useState([]);
@@ -43,34 +42,26 @@ function Cards(type) {
     })
   };
 
-  return (
-    <>
 
+
+  return (
+    <div className="max-w-5xl mx-auto px-4 py-12">
       {
         allContent.map((news, index) => (
-          <Card className="m-2">
-            <Card.Header as="h5" style={{ textTransform: 'uppercase', backgroundColor: "#2c3e50", color: "white" }}>{contentType}</Card.Header>
-            <Card.Body>
-              <Card.Title>{news.title}</Card.Title>
-              <Card.Text>
-                {news.actionStatement}
-              </Card.Text>
-              <Button
-                as={Link}
-                to="/NewsEventsItem"
-                state={{ itemData: news }}
-                style={{ backgroundColor: "#2c3e50", color: "white" }}
-              >
-                Learn More
-              </Button>
-            </Card.Body>
-          </Card>
-
+          <NewsCard
+            title={news.title}
+            date=""
+            category=""
+            actionText={news.content}
+          >
+            {/* Stop by the post office or the fire house to purchase our official 2024 Fire Department T-shirts. Thank you for your continued support! */}
+          </NewsCard>
         ))
       }
+    </div>
 
-    </>
   )
 }
 
-export default Cards;
+
+export default NewsFeed;

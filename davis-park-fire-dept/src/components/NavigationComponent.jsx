@@ -10,8 +10,8 @@ function NavigationComponent() {
   <>
       <Navbar collapseOnSelect expand="lg" className=" navbar" style={{ backgroundColor: "#2c3e50", color: "white" }} >
         <Container fluid style={{ backgroundColor: "#2c3e50" }}>
-          <Navbar.Brand  href="#home">
-            <img src="Images/logo1.png" alt="Logo" />
+          <Navbar.Brand  href="/">
+            <img src="Images/logo1.png" alt="Logo" style={{ width: "80px", height: "80px" }} />
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" style={{color: 'red'}} />
           <Navbar.Collapse id="responsive-navbar-nav" >
@@ -19,8 +19,8 @@ function NavigationComponent() {
               <Nav.Link href="/" style={{ color: "#ffff" }} >Home</Nav.Link>
               <Nav.Link href="/About" style={{ color: "#ffff" }} >About</Nav.Link>
               <Nav.Link href="/NewsEvents" style={{ color: "#ffff" }}>News & Events</Nav.Link>
-              <Nav.Link href="#features" style={{ color: "#ffff" }} >Membership</Nav.Link>
-              <Nav.Link href="#features" style={{ color: "#ffff" }} >Contact</Nav.Link>
+              <Nav.Link href="/Membership" style={{ color: "#ffff" }} >Membership</Nav.Link>
+              <Nav.Link href="/Contact" style={{ color: "#ffff" }} >Contact</Nav.Link>
               {/* <NavDropdown title="Dropdown" id="collapsible-nav-dropdown" style={{  color: "#ffff" }}>
               <NavDropdown.Item href="#action/3.1" style={{  color: "#ffff" }}>Action</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2" style={{  color: "#ffff" }}>
