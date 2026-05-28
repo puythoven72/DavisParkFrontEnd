@@ -9,6 +9,7 @@ import Form from 'react-bootstrap/Form';
 import "../App.css";
 import Alert from 'react-bootstrap/Alert';
 import { useLocation } from 'react-router-dom';
+import "../Contact.css";
 
 // const SERVICE_ID = process.env.REACT_APP_SERVICE_ID;
 // const TEMPLATE_ID = process.env.REACT_APP_TEMPLATE_ID;
@@ -41,12 +42,12 @@ function Contact(props) {
     const [startDate, setStartDate] = useState(new Date());
 
     useEffect(() => {
-      
+
 
 
     }, [submitStatus, props.navigation]);
 
-    
+
 
 
 
@@ -79,7 +80,7 @@ function Contact(props) {
 
         emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, e.target, PUBLIC_KEY)
             .then((result) => {
-              
+
                 setSubmitStatus("success")
             }, (error) => {
                 console.log(error.text);
@@ -91,7 +92,7 @@ function Contact(props) {
     };
 
 
-    
+
 
     //This will validate Contact Fields
     const validateContact = (event) => {
@@ -133,17 +134,28 @@ function Contact(props) {
     };
 
     return (
-        <>
-            <Container>
-                <Row className="mt-2  d-flex align-items-center justify-content-center text-center">
+     <Container fluid>
+        <section class="hero-form">
+          <Row class="hero-content ">
+                <h1 className="  " >Contact Us</h1>
+
+                {/* <Button className="border border-3 " onClick={() => navigate('/About')} variant size="lg" active>
+              <span className="heroButton">Learn More</span>
+            </Button> */}
+            </Row>
+
+        </section>
+        <div className="form-hero mb-2">
+            {/* <Container>
+                <Row className=" ">
                     <Col className="">
                         <h1 className="splashTitle ">
                             {contactTitle}
                         </h1>
                     </Col>
                 </Row>
-            </Container>
-            <div className=" d-flex align-items-center justify-content-center text-center">
+            </Container> */}
+            <div className=" ">
                 {submitStatus != null ?
                     <Alert key={alertVariant} variant={alertVariant} className="mt-2">
                         {messageDisplay}
@@ -151,10 +163,10 @@ function Contact(props) {
                     : null
                 }
             </div>
-            < Container className="mt-2 p-2 d-flex align-items-center justify-content-center text-center" >
+            < Container className="" >
 
-                <Row  >
-                    <Form onSubmit={validateInput} noValidate validated={validated} className="mt-1 aboutText" style={{ borderRadius: '15px', border: '1px solid black' }}>
+                <Row className="">
+                    <Form onSubmit={validateInput} noValidate validated={validated} className="mt-1 formBackround" style={{ borderRadius: '15px', border: '1px solid red' }}>
 
                         <Form.Group className="m-3" controlId="from_name">
                             <span style={{ color: "red" }}>*</span>
@@ -217,62 +229,32 @@ function Contact(props) {
                                 ) : (null)
                         }
                         {
-                        /* react-datepicker
-                        The MIT License (MIT)
-
-                        Copyright (c) 2014-2025 HackerOne Inc and individual contributors
-
-                        Permission is hereby granted, free of charge, to any person obtaining a copy
-                        of this software and associated documentation files (the "Software"), to deal
-                        in the Software without restriction, including without limitation the rights
-                        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-                        copies of the Software, and to permit persons to whom the Software is
-                        furnished to do so, subject to the following conditions:
-
-                        The above copyright notice and this permission notice shall be included in all
-                        copies or substantial portions of the Software.
-
-                        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-                        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-                        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-                        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-                        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-                        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-                        SOFTWARE. */
+                            /* react-datepicker
+                            The MIT License (MIT)
+    
+                            Copyright (c) 2014-2025 HackerOne Inc and individual contributors
+    
+                            Permission is hereby granted, free of charge, to any person obtaining a copy
+                            of this software and associated documentation files (the "Software"), to deal
+                            in the Software without restriction, including without limitation the rights
+                            to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+                            copies of the Software, and to permit persons to whom the Software is
+                            furnished to do so, subject to the following conditions:
+    
+                            The above copyright notice and this permission notice shall be included in all
+                            copies or substantial portions of the Software.
+    
+                            THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+                            IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+                            FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+                            AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+                            LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+                            OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+                            SOFTWARE. */
                         }
-                        {
-                            isRSVP ?
-                                (
-                                    <Form.Group className="m-3" controlId="rsvpTime">
-                                        <span style={{ color: "red" }}>*</span>
-                                        <Form.Label>
-                                            Desired Time
-                                        </Form.Label>
-                                        <Row>
-                                            <DatePicker
-                                                selected={startDate}
-                                                onChange={(date) => setStartDate(date)}
-                                                showTimeSelect
-                                                showTimeSelectOnly
-                                                timeIntervals={15}
-                                                dateFormat="h:mm aa"
-                                                showTimeCaption={false}
-                                                showTime={{ use12Hours: true }}
-                                                minTime={new Date().setHours(rsvpStartHour, rsvpStartMin, 0, 0)}
-                                                maxTime={new Date().setHours(rsvpEndHour, rsvpEndMin, 0, 0)}
-                                            />
-                                        </Row>
-                                    </Form.Group>
-                                ) : null}
-
 
                         <Form.Group className="m-3" controlId="message">
-                            {
-                                !isRSVP ? (
-                                    <Form.Label><span style={{ color: "red" }}>*</span>Message (500 Characters) Please include details about services you are interested in.</Form.Label>
-
-                                ) : (<Form.Label><span style={{ color: "red" }}>*</span>Queen of Wands will respond shortly confirming appointment time.</Form.Label>)
-                            }
+                            <Form.Label><span style={{ color: "red" }}>*</span>Message (500 Characters).</Form.Label>
                             <Form.Control as="textarea" rows={3}
                                 required={isRSVP ? false : true}
                                 name='message'
@@ -286,13 +268,9 @@ function Contact(props) {
                             </Form.Control.Feedback>
                         </Form.Group>
 
-
-
-
-
                         <Row >
-                            <Col    >
-                                <Button variant="" type="submit" className="mb-5 btn-custom " size="lg" >
+                            <Col className="d-flex align-items-center justify-content-center text-center hero-buttons">
+                                <Button variant="" type="submit" className="mb-5  " size="lg" style={{ borderRadius: '15px', border: '1px solid white', color: "white" }}>
                                     SUBMIT
                                 </Button>
                             </Col>
@@ -302,7 +280,8 @@ function Contact(props) {
                 </Row>
 
             </Container>
-        </>
+        </div>
+    </ Container>  
     );
 
 }

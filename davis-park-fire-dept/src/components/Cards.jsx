@@ -12,7 +12,6 @@ function Cards(type) {
   const [contentType, setContentType] = useState([]);
 
   useEffect(() => {
-    console.log("type is " + type.type);
     setContentType(type.type);
     if (type.type === "news") {
       console.log("Getting news");
@@ -25,7 +24,7 @@ function Cards(type) {
 
   //get the current events
   const getAllNews = async () => {
-    await axios.get("/Content/news.json").then((res) => {
+    await axios.get("./Content/news.json").then((res) => {
       let allnews = res.data.newsItems;
       setAllContent(allnews);
     }).catch(function (error) {
@@ -35,7 +34,7 @@ function Cards(type) {
 
   //get the current events
   const getAllEvents = async () => {
-    await axios.get("/Content/events.json").then((res) => {
+    await axios.get("./Content/events.json").then((res) => {
       let allEvents = res.data.eventItems;
       setAllContent(allEvents);
     }).catch(function (error) {

@@ -2,12 +2,38 @@ import "../About.css"
 import '../App.css'
 import Container from 'react-bootstrap/Container';
 import Row from "react-bootstrap/Row"
+import Image from "react-bootstrap/Image";
+import axios from 'axios';
+import { useEffect, useState } from "react";
+
+
 function About() {
+
+    const [aboutContent, setAboutContent] = useState([])
+
+    useEffect(() => {
+        getAboutContent();
+    }, []);
+
+
+
+    //get the current events
+    const getAboutContent = async () => {
+        
+        await axios.get("./Content/about.json").then((res) => {
+            let content = res.data.aboutContent[0].content;
+            console.log("About content is " + content);
+            setAboutContent(content);
+        }).catch(function (error) {
+            console.log("Add Text To About Content JSON File")
+        })
+    };
+
     return (
         <Container fluid className="">
             {/* <Container  > */}
             {/* <div className="about-hero">
-        <img
+        <img    
           src="/Images/EmblemLighthouse.png"
           alt="Davis Park Fire Department 70th Anniversary Emblem"
           className="about-emblem"
@@ -25,19 +51,12 @@ function About() {
                 </h1>
                 <hr className="title-divider" />
                 <p display-1 display-md-3 display-sm-4 fw-bold >
-                    Established in 1956, the Davis Park Fire Department has been keeping
-                    the people and property of Davis Park and Ocean Ridge, Fire Island
-                    safe for 60 years. The Department is currently comprised of
-                    approximately 40 dedicated members.
+                   
+                   {aboutContent}
                 </p>
                 <hr className="section-divider" />
-                <p>
-                    Besides battling the occasional beach-front blaze or enduring long
-                    hours of training, the Department also hosts a number of events,
-                    dinners, and fund-raisers throughout the year.
-                </p>
-                <hr className="section-divider" />
-                <p className="about-highlight">Stop by the Firehouse and say hi.</p>
+                
+                <p className="about-highlight">Stop by the Firehouse and say Hi!</p>
             </Row>
         </Container>
     );

@@ -1,16 +1,20 @@
 
-
-
 /* HeroSection.css */
+.hero-form-Image {
+  /* Give your hero a set height or padding */
+  min-height: 60vh; 
+  background-image: url('');
+  background-size: cover;
+  background-position: center;
+}
 
 
 
-
-.hero {
+.hero-form {
   position: relative;
   width: 100%;
   height: 100vh; /* full viewport height */
-  background: url("../src/assets/images/truckLightHero.png") center/cover no-repeat;
+  background: url("../src/assets/images/sunsetHero.png") center/cover no-repeat;
   color: #fff;
   display: flex;
   justify-content: center; /* Horizontal */
@@ -32,20 +36,20 @@
 
 
 /* Text container */
-.hero-content {
+.hero-form-content {
   position: relative;
   z-index: 3;
   max-width: 600px;
   padding-left: 220px; /* leaves space for emblem */
 }
 
-.hero-content h1 {
+.hero-form-content h1 {
    font-family: 'MerriweatherBoldItalic', sans-serif;
   font-size: 3rem;
   margin-bottom: 1rem;
 }
 
-.hero-content p {
+.hero-form p {
   font-family: "Inter", sans-serif;
   font-size: 1.2rem;
   line-height: 1.6;
@@ -53,28 +57,28 @@
 
 /* Responsive adjustments */
 @media (max-width: 1024px) {
-  .hero::after {
+  .hero-form::after {
     top: 30px;
     left: 30px;
     width: 120px;
     height: 120px;
   }
 
-  .hero-content {
+  .hero-form {
     padding-left: 160px;
   }
 }
 
 /* Mobile optimization */
 @media (max-width: 768px) {
-  .hero {
+  .hero-form {
     height: 70vh;
-    background: url("../src/assets/images/dpfd-hero-mobile.png") center/cover no-repeat;  
+    background: url("../src/assets/images/sunsetHeroMobile.png") center/cover no-repeat;  
     justify-content: center;
     text-align: center;
   }
 
-  .hero::before {
+  .hero-form::before {
     background: linear-gradient(to bottom, rgba(10, 26, 47, 0.7) 0%, transparent 100%);
   }
 
@@ -82,19 +86,33 @@
     padding: 0 20px;
   }
 
-  .hero-content h1 {
+  .hero-form h1 {
     font-size: 2rem;
   }
 
-  .hero-content p {
+  .hero-form p {
     font-size: 1rem;
   }
 }
 
 
+
+
+
+
+.form-hero {
+  color: #fff;
+}
+.form-hero h1 {
+   color: #fff;
+}
+
+
+
 .hero-buttons {
   display: flex;
-
+color: white;
+border-color :white;
   gap: 16px;
   margin-bottom: 20px;
 }
@@ -119,15 +137,8 @@
   cursor: pointer;
 }
 
-
-
-
-
-
-.card-offset{
-
-     /* THE MAGIC MAGIC HAPPENS HERE */
-  margin-top: -50px; /* Pulls the container up by 100px */
-  position: relative; /* Establishes a positioning context */
-  z-index: 10;        /* Forces it to sit on top of the hero */
+.formBackround{
+ 
+     background-color: #2c3e50;
+    
 }

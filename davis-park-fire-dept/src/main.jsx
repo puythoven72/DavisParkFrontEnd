@@ -8,7 +8,7 @@ createRoot(document.getElementById('root')).render(
 
   <StrictMode>
 
-    <BrowserRouter basename="/davis-park-fire-dept">
+    <BrowserRouter basename="/DavisParkFrontEnd">
       <App />
     </BrowserRouter>
   </StrictMode>,

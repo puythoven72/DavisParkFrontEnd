@@ -20,7 +20,7 @@
   position: relative;
   width: 100%;
   height: 100vh; /* full viewport height */
-  background: url("/Images/heroBeach.png") center/cover no-repeat
+  background: url("../src/assets/images/lighthouseHero.png") center/cover no-repeat
   ;
   
   color: #fff;
@@ -42,17 +42,17 @@
 }
 
 /* Emblem placement */
-.hero-news::after {
+/* .hero-news::after {
   content: "";
   position: absolute;
   top: 50px;
   left: 50px;
-  width: 160px; /* ~8–10% of 1920px width */
+  width: 160px; 
   height: 160px;
   background: url("/Images/logo1.png") center/contain no-repeat;
   filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.4));
   z-index: 2;
-}
+} */
 
 /* Text container */
 .hero-news-content {
@@ -76,7 +76,7 @@
 
 /* Responsive adjustments */
 @media (max-width: 1024px) {
-  .hero::after {
+  .hero-news::after {
     top: 30px;
     left: 30px;
     width: 120px;
@@ -90,14 +90,14 @@
 
 /* Mobile optimization */
 @media (max-width: 768px) {
-  .hero {
+  .hero-news {
     height: 70vh;
-    background: url("/Images/beach-hero-mobile.png") center/cover no-repeat;
+    background: url("../src/assets/images/lighthouseHeroMobile.png") center/cover no-repeat;
     justify-content: center;
     text-align: center;
   }
 
-  .hero::before {
+  .hero-news::before {
     background: linear-gradient(to bottom, rgba(10, 26, 47, 0.7) 0%, transparent 100%);
   }
 

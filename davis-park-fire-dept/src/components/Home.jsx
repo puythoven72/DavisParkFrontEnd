@@ -11,6 +11,8 @@ import Col from 'react-bootstrap/esm/Col';
 import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom'
 import CardGroup from 'react-bootstrap/CardGroup';
+import messageHandShake from '../assets/images/membershipHandShake.png';
+import dpNews from '../assets/images/dnews.png';
 
 function Home() {
 
@@ -40,65 +42,61 @@ function Home() {
 
         </Row>
       </Row> */}
-      <section class="hero">
-        <Row class="hero-content ">
+      <section class="hero ">
+        <Row class=" ">
           <h1 className=" " >Protecting Davis Park Since 1956</h1>
           <p>Volunteer. Protect. Serve our community.</p>
-            {/* <Button className="border border-3 " onClick={() => navigate('/About')} variant size="lg" active>
-              <span className="heroButton">Learn More</span>
-            </Button> */}
+
         </Row>
-       
+        {/* <Row className ="">
+          <Button className=" border border-3  hero-buttons  d-flex justify-content-center align-items-center text-center" onClick={() => navigate('/About')} variant size="lg" active style={{ width: '200px', height: '60px' }}>
+            <span className="">Learn More</span>
+          </Button>
+        </Row> */}
       </section>
 
       <Container className='cards-container  d-flex justify-content-center align-items-center text-center card-offset'>
         <Row>
           <Col>
             <CardGroup>
-              <Card
-                style={{ width: '25rem' }}
-                className="mb-2 cardHome"
-              >
+              <Card style={{ width: '25rem' }} className="mb-2 cardHome">
                 <Card.Header style={{ backgroundColor: "#2c3e50", color: "white" }}>
-                  <Card.Title className="cardHeader"> News & Events </Card.Title>
+                  <Card.Title className="cardHeader">News & Events</Card.Title>
                 </Card.Header>
-                <Card.Body>
-                  <Card.Text>
-                    <Row>
-                      Stay up to date with the latest news and events at the Davis Park Fire Department.
-                    </Row>
 
+                <Card.Body>
+                  <Card.Text className="text-center">
+                    Stay up to date with the latest news and events at the Davis Park Fire Department.
                   </Card.Text>
-                  <Image src="Images/dnews.png" thumbnail />
-                  <Row>
-                    <Link to={"./NewsEvents"} >
-                      [Explore News and Events ]
-                    </Link>
-                  </Row>
+
+                  <Image src={dpNews} thumbnail />
                 </Card.Body>
+
+                <Card.Footer className="text-center">
+                  <Link to="./NewsEvents">[ Explore News and Events ]</Link>
+                </Card.Footer>
               </Card>
-              <Card
-                style={{ width: '25rem', }}
-                className="mb-2 cardHome"
-              >
+
+              <Card style={{ width: '25rem' }} className="mb-2 cardHome">
                 <Card.Header style={{ backgroundColor: "#2c3e50", color: "white" }}>
                   <Card.Title className="cardHeader">Membership</Card.Title>
                 </Card.Header>
-                <Card.Body>
-                  <Card.Text>
-                    <Row>
-                      Become A Member
 
-                    </Row>
+                <Card.Body>
+                  <Card.Text className="text-center">
+                    Become A Member
                   </Card.Text>
-                  <Image src="Images/membership.png" thumbnail />
-                  <Row>
-                    <Link to={"./Membership"} >
-                      [Learn How To Join]
-                    </Link>
-                  </Row>
+
+                  <Image src={messageHandShake} thumbnail />
                 </Card.Body>
+
+                <Card.Footer className="text-center">
+                  <Link to={"./Membership"} >
+                    [Learn How To Join]
+                  </Link>
+                </Card.Footer>
               </Card>
+
             </CardGroup>
 
             {/* <Card

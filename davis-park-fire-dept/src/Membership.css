@@ -66,6 +66,7 @@
 
 .hero-buttons {
   display: flex;
+
   gap: 16px;
   margin-bottom: 20px;
 }

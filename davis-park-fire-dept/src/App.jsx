@@ -17,20 +17,25 @@ function App() {
   const [count, setCount] = useState(0)
 
   return (
-    <>
+    <div className="d-flex flex-column min-vh-100">
+      
       <Navigation />
-
-
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/About" element={<About />} />
-        <Route path="/NewsEvents" element={<NewsEvents />} />
-        <Route path="/NewsEventsItem" element={<NewsEventsItem />} />
-        <Route path="/Membership" element={<Membership />} />
-        <Route path="/Contact" element={<Contact />} />
-      </Routes>
+      
+      {/* 2. Wrap your Routes in a semantic <main> tag with 'flex-grow-1' so it forces itself to expand */}
+      <main className="flex-grow-1">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/About" element={<About />} />
+          <Route path="/NewsEvents" element={<NewsEvents />} />
+          <Route path="/NewsEventsItem" element={<NewsEventsItem />} />
+          <Route path="/Membership" element={<Membership />} />
+          <Route path="/Contact" element={<Contact />} />
+        </Routes>
+      </main>
+      
       <Footer />
-    </>
+
+    </div>
   )
 }
 
