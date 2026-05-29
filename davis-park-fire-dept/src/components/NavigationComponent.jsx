@@ -31,24 +31,8 @@ function NavigationComponent() {
               <Nav.Link as={Link} to="/NewsEvents" eventKey="news" style={{ color: "#ffff" }}>News & Events</Nav.Link>
               <Nav.Link as={Link} to="/Membership" eventKey="membership" style={{ color: "#ffff" }}>Membership</Nav.Link>
               <Nav.Link as={Link} to="/Contact" eventKey="contact" style={{ color: "#ffff" }}>Contact</Nav.Link>
-              {/* <NavDropdown title="Dropdown" id="collapsible-nav-dropdown" style={{  color: "#ffff" }}>
-              <NavDropdown.Item href="#action/3.1" style={{  color: "#ffff" }}>Action</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2" style={{  color: "#ffff" }}>
-                Another action
-              </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3" style={{  color: "#ffff" }}>Something</NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.4" style={{  color: "#ffff" }}>
-                Separated link
-              </NavDropdown.Item>
-            </NavDropdown> */}
+              
             </Nav>
-            {/* <Nav>
-              <Nav.Link href="#deets">More deets</Nav.Link>
-              <Nav.Link eventKey={2} href="#memes">
-                Dank memes
-              </Nav.Link>
-            </Nav> */}
           </Navbar.Collapse>
         </Container>
       </Navbar>

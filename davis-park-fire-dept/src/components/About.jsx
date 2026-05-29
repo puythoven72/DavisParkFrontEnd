@@ -19,7 +19,7 @@ function About() {
 
     //get the current events
     const getAboutContent = async () => {
-        
+
         await axios.get("./Content/about.json").then((res) => {
             let content = res.data.aboutContent[0].content;
             console.log("About content is " + content);
@@ -29,20 +29,16 @@ function About() {
         })
     };
 
+ if (!aboutContent) {
+        return <div>No about data found. Please go back to the home page.</div>;
+    }
+
     return (
         <Container fluid className="">
-            {/* <Container  > */}
-            {/* <div className="about-hero">
-        <img    
-          src="/Images/EmblemLighthouse.png"
-          alt="Davis Park Fire Department 70th Anniversary Emblem"
-          className="about-emblem"
-        />
-      </div> */}
-            {/* <div className="fade-bg"></div> */}
+
             <section className="hero-about">
                 <Row class="hero-about-content ">
-
+                    <h1>About Us</h1>
                 </Row>
             </section>
             <Row className="">
@@ -51,11 +47,11 @@ function About() {
                 </h1>
                 <hr className="title-divider" />
                 <p display-1 display-md-3 display-sm-4 fw-bold >
-                   
-                   {aboutContent}
+
+                    {aboutContent}
                 </p>
                 <hr className="section-divider" />
-                
+
                 <p className="about-highlight">Stop by the Firehouse and say Hi!</p>
             </Row>
         </Container>

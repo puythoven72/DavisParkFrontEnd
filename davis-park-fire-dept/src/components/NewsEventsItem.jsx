@@ -18,7 +18,7 @@ import { Link } from 'react-router-dom';
 
 function NewsEventsItem() {
     const location = useLocation();
-    
+
     // Access the itemData safely using optional chaining (?.) in case a user navigates here directly
     const newsItem = location.state?.itemData;
 
@@ -31,21 +31,15 @@ function NewsEventsItem() {
             <Row className="newsheroImage "></Row>
             <Row className="m-2">
                 <Card style={{}}>
-                    {/* <Card.Img
-                        variant="top"
-                        src={newsItem.image}
-                        style={{ width: '18rem' }}
-                        className="mx-auto d-block p-2   "
-                       
-                    /> */}
-                     <Image src={newsItem.image} thumbnail   style={{ width: '18rem' }}   className="mx-auto d-block mt-2   "/>
+
+                    <Image src={newsItem.image} thumbnail style={{ width: '18rem' }} className="mx-auto d-block mt-2   " />
                     <Card.Body>
                         <Card.Title>{newsItem.title}</Card.Title>
                         <hr className="title-divider" />
                         <Card.Text>
                             {newsItem.content}
                         </Card.Text>
-                       
+
                     </Card.Body>
                 </Card>
 
