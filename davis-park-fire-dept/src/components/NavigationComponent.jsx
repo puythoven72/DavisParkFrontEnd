@@ -5,6 +5,8 @@ import NavDropdown from "react-bootstrap/NavDropdown";
 import Image from "react-bootstrap/Image";
 import { Link } from 'react-router-dom'
 import '../Navigation.css'
+import { HiMenu } from 'react-icons/hi'; // Import a hamburger icon
+import logo from '../assets/images/logo1.png'; 
 
 function NavigationComponent() {
   return (
@@ -12,9 +14,13 @@ function NavigationComponent() {
       <Navbar collapseOnSelect expand="lg" className=" navbar" style={{ backgroundColor: "#2c3e50", color: "white" }} >
         <Container fluid style={{ backgroundColor: "#2c3e50" }}>
           <Navbar.Brand href="/">
-            <img src="Images/logo1.png" alt="Logo" style={{ width: "80px", height: "80px" }} />
+            <img src={logo} alt="Davis Park Logo" style={{ width: "80px", height: "80px" }} />
           </Navbar.Brand>
-          <Navbar.Toggle aria-controls="responsive-navbar-nav" style={{ color: 'red' }} />
+         
+          {/* Pass your custom styled icon inside the Toggle */}
+         <Navbar.Toggle aria-controls="responsive-navbar-nav"  >
+          <HiMenu style={{ color: '#ff6b6b', fontSize: '1.8rem' }} />
+        </Navbar.Toggle>
           <Navbar.Collapse id="responsive-navbar-nav" >
             <Nav className="me-auto navText" style={{ color: "#ffff" }} 
               onSelect={() => document.activeElement.blur()}    

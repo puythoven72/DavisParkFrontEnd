@@ -4,6 +4,7 @@ import Container from "react-bootstrap/Container";
 import { useNavigate } from 'react-router-dom';
 import "../assets/images/truckLightHero.png";
 import Col from "react-bootstrap/esm/Col";
+import rightImage from '../assets/images/truckLightHero.png';
 const Membership = () => {
 
     const navigate = useNavigate();
@@ -30,7 +31,7 @@ const Membership = () => {
             </div>
 
             <div className="hero-right">
-                <img src="./Images/truckLightHero.png" alt="Davis Park Fire Dept truck and lighthouse" />
+                <img src={rightImage} />
 
             </div>
         </Container>
