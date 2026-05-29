@@ -199,7 +199,7 @@
   }
 }
 
-.ticks {
+/* .ticks {
   position: relative;
   width: 100%;
 
@@ -219,7 +219,7 @@
     right: 0;
     border-right-color: var(--border);
   }
-}
+} */
 
 
 
@@ -337,4 +337,8 @@ border-color: rgb(255, 0, 0);
 /* Custom border color for the toggler button */
 .navbar-toggler {
   border-color: rgb(255, 0, 0);
+}
+
+footer p {
+  font-size: 1.2vw; /* scales with viewport width */
 }

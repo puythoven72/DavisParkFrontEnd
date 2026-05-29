@@ -16,12 +16,15 @@ function NavigationComponent() {
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" style={{ color: 'red' }} />
           <Navbar.Collapse id="responsive-navbar-nav" >
-            <Nav className="me-auto navText" style={{ color: "#ffff" }} >
-              <Nav.Link as={Link} to="/" style={{ color: "#ffff" }}>Home</Nav.Link>
-              <Nav.Link as={Link} to="/About" style={{ color: "#ffff" }}>About</Nav.Link>
-              <Nav.Link as={Link} to="/NewsEvents" style={{ color: "#ffff" }}>News & Events</Nav.Link>
-              <Nav.Link as={Link} to="/Membership" style={{ color: "#ffff" }}>Membership</Nav.Link>
-              <Nav.Link as={Link} to="/Contact" style={{ color: "#ffff" }}>Contact</Nav.Link>
+            <Nav className="me-auto navText" style={{ color: "#ffff" }} 
+              onSelect={() => document.activeElement.blur()}    
+            >
+             
+              <Nav.Link as={Link} to="/" eventKey="home" style={{ color: "#ffff" }}>Home</Nav.Link>
+              <Nav.Link as={Link} to="/About" eventKey="about" style={{ color: "#ffff" }}>About</Nav.Link>
+              <Nav.Link as={Link} to="/NewsEvents" eventKey="news" style={{ color: "#ffff" }}>News & Events</Nav.Link>
+              <Nav.Link as={Link} to="/Membership" eventKey="membership" style={{ color: "#ffff" }}>Membership</Nav.Link>
+              <Nav.Link as={Link} to="/Contact" eventKey="contact" style={{ color: "#ffff" }}>Contact</Nav.Link>
               {/* <NavDropdown title="Dropdown" id="collapsible-nav-dropdown" style={{  color: "#ffff" }}>
               <NavDropdown.Item href="#action/3.1" style={{  color: "#ffff" }}>Action</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2" style={{  color: "#ffff" }}>

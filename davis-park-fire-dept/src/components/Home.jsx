@@ -42,8 +42,8 @@ function Home() {
 
         </Row>
       </Row> */}
-      <section class="hero ">
-        <Row class=" ">
+      <section className="hero ">
+        <Row className=" ">
           <h1 className=" " >Protecting Davis Park Since 1956</h1>
           <p>Volunteer. Protect. Serve our community.</p>
 

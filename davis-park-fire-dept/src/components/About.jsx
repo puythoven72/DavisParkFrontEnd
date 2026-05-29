@@ -40,7 +40,7 @@ function About() {
         />
       </div> */}
             {/* <div className="fade-bg"></div> */}
-            <section class="hero-about">
+            <section className="hero-about">
                 <Row class="hero-about-content ">
 
                 </Row>

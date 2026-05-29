@@ -18,7 +18,7 @@ function NewsEvents() {
             {/* <Row className="newsheroImage "></Row> */}
             {/* <div className="fade-bg"></div> */}
 
-            <section class="hero-news">
+            <section className="hero-news">
                 <Row class="hero-content ">
                     <h1 className=" " >Latest News & Events</h1>
                     
