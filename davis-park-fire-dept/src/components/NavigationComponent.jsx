@@ -31,7 +31,7 @@ function NavigationComponent() {
               <Nav.Link as={Link} to="/NewsEvents" eventKey="news" style={{ color: "#ffff" }}>News & Events</Nav.Link>
               <Nav.Link as={Link} to="/Membership" eventKey="membership" style={{ color: "#ffff" }}>Membership</Nav.Link>
               <Nav.Link as={Link} to="/Contact" eventKey="contact" style={{ color: "#ffff" }}>Contact</Nav.Link>
-              
+               <Nav.Link as={Link} to="/Gallery" eventKey="gallery" style={{ color: "#ffff" }}>Gallery</Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Container>

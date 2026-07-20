@@ -45,8 +45,6 @@ function Contact(props) {
     }, [submitStatus]);
 
 
-
-
     const displayMessage = () => {
         switch (submitStatus) {
             case "success":
@@ -69,7 +67,6 @@ function Contact(props) {
         setSubmitStatus(null);
     };
 
-
     const handleOnSubmit = (e) => {
         e.preventDefault();
         setValidated(false);
@@ -86,9 +83,6 @@ function Contact(props) {
         e.target.reset();
         setValue("");
     };
-
-
-
 
     //This will validate Contact Fields
     const validateContact = (event) => {
@@ -209,12 +203,12 @@ function Contact(props) {
                             }
 
                             <Form.Group className="m-3" controlId="message">
-                                <Form.Label><span style={{ color: "red" }}>*</span>Message (500 Characters).</Form.Label>
+                                <Form.Label><span style={{ color: "red" }}>*</span>Message (1500 Characters).</Form.Label>
                                 <Form.Control as="textarea" rows={3}
                                     required={isRSVP ? false : true}
                                     name='message'
                                     readOnly={isRSVP ? true : false}
-                                    maxLength="500"
+                                    maxLength="1500"
                                     placeholder="Enter Message"
 
                                 />

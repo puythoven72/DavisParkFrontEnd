@@ -1,0 +1,35 @@
+{
+  "gallaryItems": [
+    {
+      "title": "Open House 2026",
+      "src": "Images/newsTruck.jpeg",
+      "description": "Test1"
+    },
+    {
+      "title": "Smoke Detectors Save Lives",
+      "src": "Images/Smoke_detector.jpg",
+      "description": "Test2"
+    },
+{
+      "title": "2026 T-Shirts are in.", 
+      "src": "Images/logo1.png",
+      "description": "Test3"
+    },
+ {
+      "title": "Open House 2026",
+      "src": "Images/newsTruck.jpeg",
+      "description": "Test1"
+    },
+    {
+      "title": "Smoke Detectors Save Lives",
+      "src": "Images/Smoke_detector.jpg",
+      "description": "Test2"
+    },
+{
+      "title": "2026 T-Shirts are in.", 
+      "src": "Images/logo1.png",
+      "description": "Test3"
+    }
+    
+  ]
+}

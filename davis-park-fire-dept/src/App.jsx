@@ -11,6 +11,7 @@ import { Routes, Route, NavLink } from "react-router-dom";
 import NewsEventsItem from './components/NewsEventsItem';
 import Membership from './components/Membership';
 import Contact from './components/Contact';
+import Gallery from './components/Gallery';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -29,6 +30,7 @@ function App() {
           <Route path="/NewsEventsItem" element={<NewsEventsItem />} />
           <Route path="/Membership" element={<Membership />} />
           <Route path="/Contact" element={<Contact />} />
+          <Route path="/Gallery" element={<Gallery />} />
         </Routes>
       </main>
       
