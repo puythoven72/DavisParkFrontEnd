@@ -1,35 +1,71 @@
 {
   "gallaryItems": [
     {
-      "title": "Open House 2026",
-      "src": "Images/newsTruck.jpeg",
-      "description": "Test1"
-    },
-    {
-      "title": "Smoke Detectors Save Lives",
-      "src": "Images/Smoke_detector.jpg",
-      "description": "Test2"
-    },
-{
       "title": "2026 T-Shirts are in.", 
-      "src": "Images/logo1.png",
+      "src": "Images/gallery/heroBeach.png",
       "description": "Test3"
     },
- {
-      "title": "Open House 2026",
-      "src": "Images/newsTruck.jpeg",
-      "description": "Test1"
-    },
-    {
-      "title": "Smoke Detectors Save Lives",
-      "src": "Images/Smoke_detector.jpg",
-      "description": "Test2"
-    },
-{
+       {
       "title": "2026 T-Shirts are in.", 
-      "src": "Images/logo1.png",
+      "src": "Images/gallery/truckLightHero.png",
       "description": "Test3"
-    }
+      }, {
+      "title": "2026 T-Shirts are in.", 
+      "src": "Images/gallery/lighthouseHero.png",
+      "description": "Test3"
+      }, {
+      "title": "2026 T-Shirts are in.", 
+      "src": "Images/gallery/sunsetHero.png",
+      "description": "Test3"
+      },
+       {
+      "title": "2026 T-Shirts are in.", 
+      "src": "Images/gallery/heroBeach.png",
+      "description": "Test3"
+    },{
+      "title": "2026 T-Shirts are in.", 
+      "src": "Images/gallery/truckLightHero.png",
+      "description": "Test3"
+      }, {
+      "title": "2026 T-Shirts are in.", 
+      "src": "Images/gallery/lighthouseHero.png",
+      "description": "Test3"
+      },
+
+       {
+      "title": "2026 T-Shirts are in.", 
+      "src": "Images/gallery/truckLightHero.png",
+      "description": "Test3"
+      }, {
+      "title": "2026 T-Shirts are in.", 
+      "src": "Images/gallery/lighthouseHero.png",
+      "description": "Test3"
+      }, {
+      "title": "2026 T-Shirts are in.", 
+      "src": "Images/gallery/sunsetHero.png",
+      "description": "Test3"
+      },
+       {
+      "title": "2026 T-Shirts are in.", 
+      "src": "Images/gallery/heroBeach.png",
+      "description": "Test3"
+    },
+       {
+      "title": "2026 T-Shirts are in.", 
+      "src": "Images/gallery/truckLightHero.png",
+      "description": "Test3"
+      }, {
+      "title": "2026 T-Shirts are in.", 
+      "src": "Images/gallery/lighthouseHero.png",
+      "description": "Test3"
+      }, {
+      "title": "2026 T-Shirts are in.", 
+      "src": "Images/gallery/sunsetHero.png",
+      "description": "Test3"
+      }
+
+
+
     
   ]
 }
